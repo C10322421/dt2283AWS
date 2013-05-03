@@ -1,0 +1,12 @@
+create instance .bash
+#!/bin/bash
+script to create ec2instance for specific student
+username = $2
+ec2-run-instances- ami-3bec7952 -t t1.micro -k $username
+
+target the 3 line after instances created 
+tail -n +3 ihead -n +1;
+cut id: i_9628
+
+echo $username, $id which will hold the usernmane name and id for the instance 
+so then you can have 
