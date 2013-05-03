@@ -1,0 +1,25 @@
+#!/bin/bash
+
+manage acc.bash
+for line in 'tail -n +2 $1.csv'
+do
+  #start of the for loop
+		#repeat the original line form the data file
+		echo $line
+		#split out the various fields from the data file 
+		studentid = 'echo $line | cut -d, -f1'
+		username = 'echo $line | cut -d, -f2'
+		email = 'echo $line | cut -d, -f3'
+		surname = 'echo $line | cut -d, -f4'
+		firstname = 'echo $line | cut -d, -f5'
+		progname = 'echo $line | cut -d, -f6'
+		stage = 'echo $line | cut -d, -f7'
+		
+	#now to display the data in diff format
+	echo "STUDENTID: "$studentid
+	echo "USERNAME: "$username
+	so on
+	echo create an ans file for above student
+	./create -instance.bash $studentid $username $email
+	echo
+done
